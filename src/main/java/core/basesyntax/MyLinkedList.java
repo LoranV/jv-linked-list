@@ -127,8 +127,7 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     }
 
     private T unlink(Node<T> node) {
-        T oldValue = node.value;
-
+        final T oldValue = node.value;
         if (size == 1) {
             head = null;
             tail = null;
@@ -145,7 +144,6 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
         node.next = null;
         node.value = null;
         node.prev = null;
-
         size--;
         return oldValue;
     }
